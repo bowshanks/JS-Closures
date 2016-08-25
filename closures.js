@@ -174,12 +174,14 @@ timeOutCounter();
 
 //////////////////PROBLEM 8////////////////////
 
-var funcArray = [function(){return 0},
-function(){return 1},
-function(){return 2},
-function(){return 3},
-function(){return 4},
-function(){return 5}];
+var funcArray = [];
+
+for (var i = 0; i <= 5; i++){
+  (function(){
+  	var x = i
+    funcArray[i] = function(){console.log(x)};
+  })();
+}
 
 /*
   Make the following code work
